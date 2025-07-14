@@ -26,11 +26,9 @@ public class Main {
     } catch (FileNotFoundException e) {
             throw new MyException("Не удалось найти файл" + e.getMessage(), e);
         } catch (IOException e) {
-            // Перехватываем IOException и выбрасываем MyFileWriteException
-            throw new MyException("Ошибка при записи в файл: " + e.getMessage(), e);
+             throw new MyException("Ошибка при записи в файл: " + e.getMessage(), e);
         } catch (SecurityException e) {
-            // Перехватываем SecurityException и выбрасываем MyFileWriteException
-            throw new MyException("Ошибка безопасности при записи в файл: " + e.getMessage(), e);
+           throw new MyException("Ошибка безопасности при записи в файл: " + e.getMessage(), e);
         }
         try {
             readAndPrintFileContent(filePath);
